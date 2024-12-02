@@ -1,0 +1,17 @@
+	ldaa #12
+	staa $50
+	ldab #18
+	stab $60
+	bita #1
+	beq even
+	asla 
+	adda $50 
+	sba
+	staa $50
+	bra xx 
+even asra
+	staa $50
+	aslb
+	aslb
+	stab $60
+xx	.end
