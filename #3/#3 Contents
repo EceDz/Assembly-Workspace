@@ -1,0 +1,55 @@
+Array Transformation in Assembly
+1. Objectives
+Aims to strengthen your skills in manipulating arrays and
+implementing basic mathematical transformations in assembly language. You will be
+working with two arrays to apply transformations and use loop structures to process
+array elements sequentially.
+2. Task
+Write an assembly program that performs the following operations on two arrays:
+1. Initialize Array A :
+Define an array A with five elements of your choice (e.g., {7, 16, 8,
+3, 12} ).
+Store these elements in consecutive memory addresses (e.g., starting
+from $30 ).
+2. Array Transformation:
+For each element in array A , apply the following transformation:
+If the element is even, divide it by 2.
+If the element is odd, multiply it by 2 and add 1.
+Store the transformed values in a new array, B , using consecutive
+memory addresses (e.g., starting from $40 ).
+3. Sum Calculation:
+After transforming each element in array A and storing the results in
+array B , calculate the sum of all elements in array B .
+Store the final sum at a specified memory location (e.g., $50 ).
+4. Array Difference Creation:
+For each element in Array B , subtract it from the total sum value to
+create a new array, C .
+Store Array C in consecutive memory addresses.
+3. Example Input and Output
+Initial Array A (values in memory starting at $30 ): {7, 16, 8, 3, 12}
+Expected Result in Array B (memory starting at $40 ): {15, 8, 4, 7, 6}
+Sum of Array B Elements (stored at $50 ): 40
+**Array C (subtracting each element in B from the total sum 40 ): {25, 32,
+36, 33, 34}
+After running the program:
+1. Array B should contain transformed values based on the rules for even and odd
+numbers.
+2. Memory address $40 should hold the sum of all elements in array B .
+4. Hints
+Use LDAA and STAA instructions to load and store individual array values.
+Use LSRA (Logical Shift Right) to divide even numbers by 2.
+Use ASLA (Arithmetic Shift Left) and ADDA instructions to handle
+multiplication and addition for odd numbers.
+Use an index register (e.g., X or Y ) to iterate through array A and store
+results in array B .
+To calculate the sum, use a loop to add each element in B and accumulate the
+result.
+5. Program Requirements
+Array A should be initialized in memory starting at address $30 .
+Array B should store transformed values in memory starting at address $40 .
+The sum of elements in B should be stored at memory address $50 .
+Array C should store the results of each element in Array B subtracted from
+the total sum, starting at address $A0 .
+Implement branching and looping to process each array element.
+Use conditional checks to determine whether an element in A is even or odd.
+Include comments to document the purpose of each major section of the code.
