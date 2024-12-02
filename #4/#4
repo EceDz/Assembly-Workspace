@@ -1,0 +1,44 @@
+	ldaa #3
+	staa $60
+	ldaa #8
+	staa $61
+	ldaa #13
+	staa $62
+	ldaa #18
+	staa $63
+	ldaa #23
+	staa $64
+
+	ldab #0
+	ldx #0
+
+LOOP ldaa $60,x
+	cmpa #10
+	bgt GREAT
+	jsr LESS
+	bra CTRL
+
+GREAT ldaa $60,x
+	suba #7
+	jsr STORE
+	bra CTRL 
+	rts 
+
+LESSER jsr LESS
+	bra CTRL
+
+LESS ldaa $60,x
+	adda #5
+	jsr STORE 
+	rts 
+
+STORE staa $70,x	
+	adda $80
+	staa $80
+	rts	
+
+CTRL incb
+	cmpb #5
+	inx
+	bmi LOOP
+	.end
