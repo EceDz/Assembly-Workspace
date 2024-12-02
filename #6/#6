@@ -1,0 +1,43 @@
+.org $200
+	ldaa #3
+	staa $80
+	ldaa #12
+	staa $81
+	ldaa #7
+	staa $82
+	ldaa #1
+	staa $83
+	ldaa #9
+	staa $84 
+
+	ldab #4
+	stab $90
+	ldab #10
+	stab $91
+	ldab #8
+	stab $92
+	ldab #5
+	stab $93
+	ldab #3
+	stab $94
+
+	ldx #0
+	ldab #0
+
+SMALLER cmpb #5
+	beq FINAL
+	ldaa $80,x
+	adda $90,x
+	cmpa #15
+	bgt GREATER
+	ldaa #0
+	bra LOOP
+
+GREATER ldaa #1
+	bra LOOP
+
+LOOP staa $A0,x
+	inx
+	incb
+	bra SMALLER
+FINAL .end
