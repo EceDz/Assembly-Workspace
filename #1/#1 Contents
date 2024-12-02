@@ -1,5 +1,4 @@
-practice using the 68000 instruction set and addressing
-modes.
+Practice using the 68000 instruction set and addressing modes.
 1. Objectives
 ● Write a 68000 assembly program that performs a simple arithmetic operation.
 ● Read input values from memory.
