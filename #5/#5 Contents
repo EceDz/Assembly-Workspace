@@ -1,19 +1,24 @@
-Write an assembly code that implements the following C program, which includes
-addition and subtraction operations using appropriate addressing methods.
-int X[] = {3, 12, 7, 1, 9};
-int Y[] = {4, 10, 8, 5, 3};
-int Z[5];
-int i;
-for(i = 0; i < 5; i++) {
-if (X[i] + Y[i] > 15) {
-Z[i] = 1;
-}
-else {
-Z[i] = 0;
-}
-}
-When converting this program to assembly language, please follow these guidelines:
-Store arrays X and Y in the address ranges 80H-84H and 90H-94H, respectively.
-At the end of your program, store the resulting array Z in the address range
-A0H-A4H.
-Place your machine code starting from memory address 200H.
+Write an assembly language program that implements the following C code:
+int x = 4;
+int y = 5;
+x = (x * 9) – (y * 7);
+if (x > 6)
+if (y > 7)
+y = y * 2;
+else
+y = y / 2;
+else
+x = x / 4;
+x = x + y;
+Task Breakdown:
+-. Initial values:
+x = 4 should be stored at memory address $50.
+y = 5 should be stored at memory address $60.
+/. Mathematical Operations:
+x = (x * 9) - (y * 7) should be performed using shift operations for multiplications.
+Use conditional branches to check if x > 6 and y > 7.
+0. Final Operations:
+Depending on the result of the conditional checks, adjust the values of x and y using shift
+operations for division and multiplication.
+Add x and y, storing the result back in x.
+1. Store x and y at memory addresses $50 and $60, respectively.
