@@ -1,0 +1,31 @@
+practice using the 68000 instruction set and addressing
+modes.
+1. Objectives
+● Write a 68000 assembly program that performs a simple arithmetic operation.
+● Read input values from memory.
+● Use arithmetic instructions.
+● Store the result to memory.
+2. Task
+Write a 68000 assembly program that computes the following formula:
+Z = (X + 3) * 6 - 4 * Y
+● The program should read the value of X from memory address $90 and the value of Y
+from memory address $91.
+● The result Z should be stored in memory address $93.
+● You can use additional memory addresses to store intermediate results.
+● Try to keep the code concise by leveraging shift operations for multiplication and
+division.
+3. Example Input and Output
+Test your code with the following input values:
+● X = 3
+● Y = 5
+After executing your program, the memory address $93 should contain the calculated value of
+Z.
+4. Hints
+● Use the LDAA and LDAB instructions to load the values of X and Y into the
+accumulators A and B, respectively.
+● Use the ADDA and SUBB instructions for addition and subtraction, respectively.
+● Use the ASLA and ASLB instructions for multiplication by powers of 2 (left shift).
+● You may need to use intermediate memory locations to hold temporary values during
+calculation.
+● Use the STAA instruction to store the final result Z in memory address $93.
+● Refer to source for the description of the 68000 instructions and their addressing modes.
