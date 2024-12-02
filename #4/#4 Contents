@@ -1,0 +1,45 @@
+Array Transformation Using Subroutines in Assembly Language
+1. Objectives
+Aims to provide practical experience in using subroutines, loops,
+and conditional statements in assembly language. You will work with an array of
+integers and perform value transformations using structured looping and subroutine
+calls.
+2. Task
+Write an assembly program that performs the following operations:
+1. Initialize Array A:
+Define an array A with five integer elements of your choice (e.g., {3,
+8, 13, 18, 23} ).
+Store these elements in consecutive memory addresses (e.g., starting
+from $30 ).
+2. Create a subroutine to calculate the difference:
+Implement a subroutine that takes two parameters (two numbers from the
+array) and returns their difference.
+3. Process Array A:
+Use a loop to iterate over each element of Array A.
+If an element is less than 10, add 5 to that element using the
+subroutine and store it in Array B. If it is greater than or equal to
+10, subtract 7 and store the result in Array B.
+4. Store results:
+Store Array B in consecutive memory addresses (e.g., starting from
+$40 ).
+Additionally, store the final sum of all elements in Array B at a
+specified memory location (e.g., $50 ).
+3. Example Input and Output
+Initial Array A (values in memory starting at $30 ): {3, 8, 13, 18, 23}
+Expected Result in Array B (memory starting at $40 ): {8, 13, 6, 11, 16}
+Sum of Array B Elements (stored at $50 ): 54
+4. Hints
+Use LDAA and STAA instructions to load and store individual array values.
+Use SUBA for subtraction.
+Use JSR to call the subroutine for calculating the difference between two
+numbers.Utilize an index register (e.g., X or Y ) to iterate through Array A and store
+results in Array B.
+Implement branching and looping to process each array element.
+Include comments to document the purpose of each major section of the code.
+5. Program Requirements
+Array A should be initialized in memory starting at address $30 .
+Array B should store transformed values in memory starting at address $40 .
+The sum of elements in B should be stored at memory address $50 .
+Implement conditional checks to determine whether an element in A is less than
+10.
+Thorough commenting in your code improves readability and helps during grading.
