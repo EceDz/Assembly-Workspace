@@ -1,1 +1,19 @@
-
+	ldaa #3
+	ldab #5
+	ldaa $90
+	adda #3
+	staa $91
+	asla 
+	asla
+	adda $90
+	adda #3 
+	adda $90
+	adda #3
+	ldab $91
+	aslb 
+	aslb
+	stab $93
+	suba $93
+	staa $93	
+	.end
+	
