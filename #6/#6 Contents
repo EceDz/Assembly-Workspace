@@ -1,0 +1,19 @@
+Write an assembly code that implements the following C program, which includes
+addition and subtraction operations using appropriate addressing methods.
+int X[] = {3, 12, 7, 1, 9};
+int Y[] = {4, 10, 8, 5, 3};
+int Z[5];
+int i;
+for(i = 0; i < 5; i++) {
+if (X[i] + Y[i] > 15) {
+Z[i] = 1;
+}
+else {
+Z[i] = 0;
+}
+}
+When converting this program to assembly language, please follow these guidelines:
+Store arrays X and Y in the address ranges 80H-84H and 90H-94H, respectively.
+At the end of your program, store the resulting array Z in the address range
+A0H-A4H.
+Place your machine code starting from memory address 200H.
