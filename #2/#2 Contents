@@ -1,0 +1,36 @@
+Arithmetic and Conditional Branch Instructions in M6800
+1. Objectives
+Practice using arithmetic operations and
+conditional branch instructions in the M6800 assembly language. By completing this lab,
+you will strengthen your understanding of branching mechanisms and basic arithmetic
+on the M6800 architecture.
+2. Task
+1. Initialize the following two values in memory:
+● x = 12 at memory address $50
+● y = 18 at memory address $60
+2. If x is an odd number (i.e., x % 2 != 0), perform the following operations:
+● Multiply x by 3
+● Subtract y from the result
+3. If x is an even number (i.e., x % 2 == 0), perform the following operations:
+● Divide x by 2
+● Multiply y by 4
+4. Store the updated values of x and y back into their original memory addresses.
+3. Example Input and Output
+Test your program with the following input values:
+● x = 12 (stored in memory address $50)
+● y = 18 (stored in memory address $60)
+After executing the program:
+● If x is even, memory address $50 should contain the new value of x, and $60
+should contain the new value of y after applying the arithmetic operations.
+● If x is odd, the final values of x and y should also be stored in $50 and $60,
+respectively.
+4. Hints
+● Use the LDAA and LDAB instructions to load values from memory into the
+accumulators.
+● Use the ADDA, SUBA, ASLA, LSRA, and ASLB instructions for addition,
+subtraction, multiplication, and division, respectively.
+● Use conditional branch instructions like BEQ or BNE to handle the conditional
+statements (if and else).
+● Use shift operations (ASL and LSR) for multiplication by powers of 2 (multiplying
+by 4 or dividing by 2).
+● Use the STAA instruction to store results back into memory.
