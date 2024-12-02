@@ -1,0 +1,46 @@
+	ldaa #7
+	staa $30
+	ldaa #16
+	staa $31
+	ldaa #8
+	staa $32
+	ldaa #3
+	staa $33
+	ldaa #12
+	staa $34
+
+	ldx #0
+	ldab #0
+
+LOOP ldaa $30,x 
+	stab $50
+	anda #1
+	bne ODD
+	bra CTRL
+
+EVEN ldaa $30,x
+	lsra 
+	staa $40,x
+	bra CTRL
+
+ODD  ldaa $30,x
+	asla
+	adca #1
+	staa $40,x
+	bra CTRL	
+
+	ldx #0
+	clra	
+
+DIFF ldaa $50
+	ldab $40,x
+	sba 
+	staa $60,x
+	bra CTRL
+
+CTRL incb
+	cmpb #5
+	inx
+	bmi LOOP
+	
+	.end
