@@ -28,7 +28,7 @@ but the committed code in `#5/#5` is an unrelated loop that increments a counter
 
 ## Toolchain
 
-These are written for the Motorola 6800/68HC11-style instruction set (`LDAA`/`LDAB`, `STAA`/`STAB`, `ASLA`, `BEQ`/`BNE`/`BPL`, `JSR`/`RTS`, etc.) as commonly used with 68xx simulators/assemblers in coursework (e.g. EASy68K or a 6800 simulator). No build system is included — assemble/run each file with whatever 6800-family assembler or simulator your course uses.
+These are written for the Motorola 6800/68HC11-style instruction set (`LDAA`/`LDAB`, `STAA`/`STAB`, `ASLA`, `BEQ`/`BNE`/`BPL`, `JSR`/`RTS`, etc.) as commonly used with 68xx simulators/assemblers in coursework (e.g. EASy68K or a 6800 simulator). No build system is included — assemble/run each file with whatever 6800-family assembler or simulator.
 
 ## License
 
