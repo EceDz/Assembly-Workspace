@@ -10,7 +10,7 @@ A collection of Motorola 6800/68000 assembly language exercises, written for a c
 | [`#2`](#2) | Conditional branching | Loads `x` and `y` from memory (`$50`, `$60`); if `x` is odd, computes `3x - y`, if even, computes `x/2` and `4y`; results stored back to the original addresses |
 | [`#3`](#3) | Arrays & loops | Transforms a 5-element array `A` (starting at `$30`) into array `B` (`$40`) — halving even elements, doubling-and-incrementing odd elements — sums `B` into `$50`, then computes a difference array `C` |
 | [`#4`](#4) | Subroutines & arrays | Similar array-transform-and-sum task to `#3`, but structured around a `JSR`-based subroutine for the add/subtract step, with a loop over a 5-element array |
-| [`#5`](#5) | Nested conditionals | Describes a nested-conditional arithmetic problem (`x = x*9 - y*7`, then conditional halving/doubling of `x`/`y`)  using values loaded from memory ($50, $60)|
+| [`#5`](#5) | Nested conditionals | Describes a nested-conditional arithmetic problem (`x = x*9 - y*7`, then conditional halving/doubling of `x`/`y`)  using values loaded from memory (`$50`, `$60`)|
 | [`#6`](#6) | Arrays & comparison | Implements a C-style loop comparing two 5-element arrays `X` (`$80`) and `Y` (`$90`) element-wise; stores `1` into array `Z` (`$A0`) where `X[i] + Y[i] > 15`, else `0` |
 
 Each folder also contains a Contents file with the original instructions.
