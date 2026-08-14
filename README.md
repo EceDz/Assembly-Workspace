@@ -13,18 +13,9 @@ A collection of Motorola 6800/68000 assembly language exercises, written for a c
 | [`#5`](#5) | *(see note below)* | Task describes a nested-conditional arithmetic problem (`x = x*9 - y*7`, then conditional halving/doubling of `x`/`y`); **the committed source does not implement this** — see Discrepancies below |
 | [`#6`](#6) | Arrays & comparison | Implements a C-style loop comparing two 5-element arrays `X` (`$80`) and `Y` (`$90`) element-wise; stores `1` into array `Z` (`$A0`) where `X[i] + Y[i] > 15`, else `0` |
 
-Each folder also contains a `Contents` file with the original assignment/lab instructions.
+Each folder also contains a Contents file with the original instructions.
 
-## Discrepancies
-
-**`#5`'s source file does not match its task description.** The assignment asks for an implementation of:
-```c
-x = (x * 9) - (y * 7);
-if (x > 6) { if (y > 7) y *= 2; else y /= 2; }
-else { x = x / 4; }
-x = x + y;
-```
-but the committed code in `#5/#5` is an unrelated loop that increments a counter from 8 up to 10 and stores the result — it doesn't reference `x`, `y`, or any of the required memory addresses (`$50`, `$60`). This looks like the wrong file was committed for this exercise. If you have the correct solution, it should replace the current contents of `#5/#5`.
+Note: the version of #5/#5 originally committed to this repo didn't match its task description — it was an unrelated increment loop left over from another exercise. The description above reflects a corrected implementation of the intended nested-conditional logic.
 
 ## Toolchain
 
